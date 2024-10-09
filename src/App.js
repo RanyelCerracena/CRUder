@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Post from './pages/Post/Post';
+import Edit from './pages/Edit/Edit';
+import Feed from './pages/Feed/Feed';
+import LerMais from './pages/LerMais/LerMais';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+  return(
+  <Router>
+    <Routes>
+      <Route exact path="/" Component={Feed}/>
+      <Route path="/post" Component={Post}/>
+      <Route path="/edit" Component={Edit}/>
+      <Route path="/lermais" Component={LerMais}/>
+    </Routes>
+  </Router>
+  )
+};
 
 export default App;
