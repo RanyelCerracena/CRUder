@@ -8,7 +8,7 @@ function Header() {
         <header>
             <div className="container">
                 <Link to={"/"}>
-                    <img src={Back} style={{width: '50px'}}/>
+                    <img src={Back} alt="back icon" style={{width: '50px'}}/>
                 </Link>
             </div>
         </header>
